@@ -1,2 +1,2 @@
 #!/bin/bash
-last -n 5 root
+sudo last -n 5 root
