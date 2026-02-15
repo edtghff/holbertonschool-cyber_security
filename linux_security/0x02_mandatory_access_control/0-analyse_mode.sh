@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(sestatus | grep 'SELinux status')"
+sudo last -F -5
