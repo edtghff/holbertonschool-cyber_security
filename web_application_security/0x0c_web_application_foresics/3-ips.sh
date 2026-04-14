@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' auth.log | sort | uniq | wc -l
+grep "sshd" auth.log | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq | wc -l
