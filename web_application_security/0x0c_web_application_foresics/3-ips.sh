@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep "Accepted password" auth.log | awk '{print $11}' | sort | uniq | wc -l
+grep "sshd" auth.log | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq | wc -l
