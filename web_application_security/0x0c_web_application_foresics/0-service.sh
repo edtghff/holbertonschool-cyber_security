@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep -oE 'sshd|apache2|nginx|vsftpd' $1 | sort | uniq -c | sort -nr
+grep sshd auth.log | cut -d' ' -f5 | sort | uniq -c | sort -nr
