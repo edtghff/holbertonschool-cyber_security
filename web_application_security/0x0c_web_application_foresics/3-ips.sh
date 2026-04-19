@@ -1,3 +1,4 @@
 #!/bin/bash
+# Count distinct attacker IPs (unique IP addresses)
 
-grep "sshd" auth.log | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq | wc -l
+cut -d ' ' -f1 $1 | sort -u | wc -l
